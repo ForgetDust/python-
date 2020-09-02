@@ -16,7 +16,7 @@ while a != s:
     count = count+1
     if a >= s and count < 5:
         a = int(input("sorry! you are worry!it's too large please try again:"))
-    elif a <= s:
+    elif a <= s and count < 5:
         a = int(input("sorry! you are worry!it's too small,please try again:"))
     else:
         print('sorry! you have no chance')
