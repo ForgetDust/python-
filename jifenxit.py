@@ -20,21 +20,28 @@ user = ''
 while user != 'game over':
     user = input('please input team:')
     if user == team1:
-        score1 = int(input('please input score:'))
-        
-        if score1 <= 3:
-            list_score1.append(score1)
-            totle1 = sum(list_score1)
-            print('team %s is scored %d   team %s is scored %d' %(team1,totle1,team2,totle2))
+        score1 = input('please input score:')
+        if score1.isdigit() == 'true':
+            score1 = int(score1)
+            if score1 <= 3:
+                list_score1.append(score1)
+                totle1 = sum(list_score1)
+                print('team %s is scored %d   team %s is scored %d' %(team1,totle1,team2,totle2))
+            else:
+                print('The score you entered is illegal')
         else:
             print('The score you entered is illegal')
   
     elif user == team2:
         score2 = int(input('please input score:'))
-        if score2 <= 3:
-            list_score2.append(score2)
-            totle2 = sum(list_score2)
-            print('team %s is scored %d   team %s is scored %d' %(team1,totle1,team2,totle2))
+        if score2.isdigit() == 'true':
+            score2 = int(score2)
+            if score2 <= 3:
+                list_score2.append(score2)
+                totle2 = sum(list_score2)
+                print('team %s is scored %d   team %s is scored %d' %(team1,totle1,team2,totle2))
+            else:
+                print('The score you entered is illegal')
         else:
             print('The score you entered is illegal')
         
