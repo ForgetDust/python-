@@ -2,7 +2,7 @@
 """
 Created on Thu Sep  3 09:46:30 2020
 
-@author: tute
+@author: ForgetDust
 """
 
 team1 = input('please input team1 name:')
