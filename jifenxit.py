@@ -33,7 +33,7 @@ while user != 'game over':
             print('The score you entered is illegal')
   
     elif user == team2:
-        score2 = int(input('please input score:'))
+        score2 = input('please input score:')
         if score2.isdigit() == 'true':
             score2 = int(score2)
             if score2 <= 3:
