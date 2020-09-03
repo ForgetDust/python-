@@ -2,7 +2,7 @@
 """
 Created on Thu Sep  3 09:46:30 2020
 
-@author: ForgetDust
+@author: tute
 """
 
 team1 = input('please input team1 name:')
@@ -21,17 +21,28 @@ while user != 'game over':
     user = input('please input team:')
     if user == team1:
         score1 = int(input('please input score:'))
-        list_score1.append(score1)
-        for i in range(0,len(list_score1)):
-            totle1 = totle1 + list_score1[i]
+        
+        if score1 <= 3:
+            list_score1.append(score1)
+            totle1 = sum(list_score1)
             print('team %s is scored %d   team %s is scored %d' %(team1,totle1,team2,totle2))
-    if user == team2:
+        else:
+            print('The score you entered is illegal')
+  
+    elif user == team2:
         score2 = int(input('please input score:'))
-        list_score2.append(score2)
-        for o in range(0,len(list_score2)):
-            totle2 = totle2 + list_score2[o]
+        if score2 <= 3:
+            list_score2.append(score2)
+            totle2 = sum(list_score2)
             print('team %s is scored %d   team %s is scored %d' %(team1,totle1,team2,totle2))
+        else:
+            print('The score you entered is illegal')
+        
+    else:
+        print('your input error! please try again!')
+        
 else:
+    print("GAME OVER!")
     print('team %s scored %d' %(team1,totle1))
     print('team %s scored %d' %(team2,totle2))
     if totle1 > totle2:
