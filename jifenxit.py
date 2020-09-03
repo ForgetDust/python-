@@ -28,7 +28,7 @@ totle2 = 0
 user = ''
 
 while user != 'game over':
-    user = input('please input team:')
+    user = input('please input team:').strip()
     if user == team1:
         score1 = input('please input score:').strip()
         if score1.isdigit() == True:
@@ -55,8 +55,8 @@ while user != 'game over':
         else:
             print('The score you entered is illegal')
 
-    else:
-        print('your input error! please try again!')
+    elif user != 'game over':
+        print('The team you entered does not exist,Please re-enter!')
 
 else:
     print("GAME OVER!")
