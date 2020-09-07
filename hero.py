@@ -6,26 +6,53 @@
 @Author : ForgetDust
 @Time : 2020/9/1 11:20
 """
+welcome = '- * - welcome to Hearoes World ! - * -'
+mapmsg = ('#######')
+mapins = "\n- * - the world is like this - * - \n %s \n the '*' is you" %(a,)
+
+worldMap = ['#','#','#','#','#','#','#']
+instruction = '''
+contrl your hero : | 'a' for left | 'd' for right | 'w' for up | 's' for down| '''
+
+print(welcome)
+
 
 hp = 100
-
-print('welcome Heroes World！')
-print("|the world is like this #####,'a' for left,'d' for right |")
-
 name = input('input your name:')
 
 if not name:
     name = '玩家1'
 
-usrmsg = [name,hp]
+usermsg = {'name':name,'hp':hp}
 
-print("your hero name is:",usrmsg[0],'Hp is',usrmsg[1])
-print("and now you are here: * #### | 'a' for left,'d' for right |")
+print("Hi!",usermsg['name'],'you Hp is :',usermsg['hp'])
+print(mapins,instruction)
 
-userinput = input()
+point = 0
 
-if userinput == 'd':
-    print("you are here # * ###")
-
-if userinput == 'a':
-    print("you are here * ####")
+while 1 :
+    worldMap[point] = " * "
+    print('you are here',"".join(worldMap))
+    userinput = input('go or quit:')
+    
+    if userinput == 'd' and point < 6:
+        worldMap[point] = '#'
+        point += 1
+    
+    elif userinput == 'a' and point > 0:
+        worldMap[point] = '#'
+        point -= 1
+    
+    elif userinput == 'w' and point > 0:
+        worldMap[point] = '#'
+        point 
+        
+    elif userinput == 's' and point < 6:
+        worldMap[point] = '#'
+        point
+        
+    elif userinput == 'quit':
+        print('good bye !!')
+        break
+    else:
+        print(instruction)
