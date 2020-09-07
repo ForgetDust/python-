@@ -8,7 +8,7 @@
 """
 welcome = '- * - welcome to Hearoes World ! - * -'
 mapmsg = '#######'
-mapins = "\n- * - the world is like this - * - \n %s \n the '*' is you" %(a,)
+mapins = "\n- * - the world is like this - * - \n %s \n the '*' is you" %(mapmsg,)
 
 worldMap = ['#','#','#','#','#','#','#']
 instruction = '''
