@@ -7,7 +7,7 @@
 @Time : 2020/9/1 11:20
 """
 welcome = '- * - welcome to Hearoes World ! - * -'
-mapmsg = ('#######')
+mapmsg = '#######'
 mapins = "\n- * - the world is like this - * - \n %s \n the '*' is you" %(a,)
 
 worldMap = ['#','#','#','#','#','#','#']
