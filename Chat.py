@@ -5,7 +5,7 @@ import wx
 import time
 
 class Chat(wx.App):
-    def ChatStyle(self):
+    def OnInit(self):
         frame = wx.Frame(parent = None,title = "ForgetDust chat",
                          size = (520,450),
                          pos = (500,300))
@@ -34,7 +34,7 @@ class Chat(wx.App):
         return True
     
     def ButtonSent(self,event):
-        userinput = self.textin.GetValue()
+        userinput = self.textIn.GetValue()
         self.textIn.Clear()
         nowtime = time.ctime()
         inmsg = "You (%s) :\n%s\n" %(nowtime,userinput)
